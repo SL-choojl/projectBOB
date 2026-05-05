@@ -23,5 +23,5 @@ employees.pgm.sqlrpgle: emps.dspf employee.table
 	system -s "CRTDSPF FILE($(BIN_LIB)/$*) SRCFILE($(BIN_LIB)/QDDSSRC) SRCMBR($*)"
 
 %.table: qddssrc/%.table
-	liblist -c $(BIN_LIB);\
+	liblist -c $(BIN_LIB);
 	system "RUNSQLSTM SRCSTMF('$<') COMMIT(*NONE)"
